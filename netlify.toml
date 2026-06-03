@@ -1,9 +1,0 @@
-# Static site — no build step. Drag this folder at https://app.netlify.com/drop
-[build]
-  publish = "."
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
