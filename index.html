@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday — DJ Party</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="lights" aria-hidden="true">
+    <div class="beam beam-1"></div>
+    <div class="beam beam-2"></div>
+    <div class="beam beam-3"></div>
+    <div class="beam beam-4"></div>
+  </div>
+
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <div class="disco-ball" aria-hidden="true"></div>
+
+  <main class="stage">
+    <header class="hero">
+      <p class="tag">LIVE FROM THE DANCE FLOOR</p>
+      <h1 class="title">
+        <span class="title-line">HAPPY</span>
+        <span class="title-line accent">BIRTHDAY</span>
+      </h1>
+      <label class="name-field">
+        <span>Who's the star tonight?</span>
+        <input id="guestName" type="text" placeholder="Enter a name…" maxlength="32" autocomplete="name" />
+      </label>
+    </header>
+
+    <section class="dj-booth" aria-label="DJ booth">
+      <div class="booth-glow"></div>
+      <div class="dj-avatar">
+        <div class="headphones"></div>
+        <div class="dj-face">
+          <span class="eye left"></span>
+          <span class="eye right"></span>
+          <span class="smile"></span>
+        </div>
+        <p class="dj-name">DJ SPINCAKE</p>
+        <p class="dj-status" id="djStatus">Ready to drop the beat…</p>
+      </div>
+
+      <div class="decks">
+        <div class="turntable">
+          <div class="vinyl" id="vinylLeft">
+            <div class="vinyl-label">HB</div>
+          </div>
+          <div class="tonearm"></div>
+        </div>
+
+        <div class="mixer">
+          <div class="eq" id="eqBars" aria-hidden="true"></div>
+          <div class="faders">
+            <div class="fader"><span></span></div>
+            <div class="fader"><span></span></div>
+            <div class="fader active"><span></span></div>
+          </div>
+        </div>
+
+        <div class="turntable">
+          <div class="vinyl vinyl-right" id="vinylRight">
+            <div class="vinyl-label">🎂</div>
+          </div>
+          <div class="tonearm tonearm-right"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="karaoke" aria-label="Birthday song lyrics">
+      <p class="karaoke-label">NOW PLAYING</p>
+      <div class="lyrics" id="lyrics">
+        <p class="lyric-line" data-index="0">Happy birthday to you</p>
+        <p class="lyric-line" data-index="1">Happy birthday to you</p>
+        <p class="lyric-line" data-index="2">Happy birthday dear <span id="lyricName">friend</span></p>
+        <p class="lyric-line" data-index="3">Happy birthday to you!</p>
+      </div>
+    </section>
+
+    <div class="controls">
+      <button type="button" class="btn btn-primary" id="playBtn">
+        <span class="btn-icon">▶</span>
+        Drop the Birthday Track
+      </button>
+      <button type="button" class="btn btn-secondary" id="confettiBtn">Confetti Blast</button>
+      <button type="button" class="btn btn-secondary" id="muteBtn" aria-pressed="false">Sound On</button>
+    </div>
+
+    <p class="hint">Turn up your volume — DJ Spincake is about to sing!</p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
