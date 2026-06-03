@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A heavenly birthday blessing — angels, peace, and joy on your special day." />
+  <meta name="theme-color" content="#1c2844" />
+  <title>Happy Birthday — Heavenly Blessings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="sky" aria-hidden="true">
+    <div class="aurora"></div>
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+    <div class="rays"></div>
+  </div>
+
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <main class="blessing-card">
+    <div class="angels" aria-hidden="true">
+      <svg class="angel angel-left" viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="wingL" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fffef8" />
+            <stop offset="100%" stop-color="#e8d5a8" />
+          </linearGradient>
+        </defs>
+        <ellipse class="wing wing-back" cx="55" cy="90" rx="48" ry="28" fill="url(#wingL)" opacity="0.5" />
+        <ellipse class="wing wing-front" cx="50" cy="85" rx="52" ry="32" fill="url(#wingL)" />
+        <circle cx="72" cy="58" r="14" fill="#f5ecd8" />
+        <path d="M72 72 L72 130 Q72 145 60 150" stroke="#e8d5a8" stroke-width="8" fill="none" stroke-linecap="round" />
+        <ellipse cx="88" cy="100" rx="6" ry="18" fill="#f5ecd8" transform="rotate(-20 88 100)" />
+      </svg>
+
+      <div class="halo-ring"></div>
+
+      <svg class="angel angel-right" viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="wingR" x1="100%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#fffef8" />
+            <stop offset="100%" stop-color="#e8d5a8" />
+          </linearGradient>
+        </defs>
+        <ellipse class="wing wing-back" cx="65" cy="90" rx="48" ry="28" fill="url(#wingR)" opacity="0.5" />
+        <ellipse class="wing wing-front" cx="70" cy="85" rx="52" ry="32" fill="url(#wingR)" />
+        <circle cx="48" cy="58" r="14" fill="#f5ecd8" />
+        <path d="M48 72 L48 130 Q48 145 60 150" stroke="#e8d5a8" stroke-width="8" fill="none" stroke-linecap="round" />
+        <ellipse cx="32" cy="100" rx="6" ry="18" fill="#f5ecd8" transform="rotate(20 32 100)" />
+      </svg>
+    </div>
+
+    <header class="card-header">
+      <p class="eyebrow">With love and prayers</p>
+      <h1 class="title">Happy Birthday</h1>
+      <p class="subtitle">May heaven rejoice with you today</p>
+    </header>
+
+    <section class="personal">
+      <label for="honoredName">This blessing is for</label>
+      <input
+        id="honoredName"
+        type="text"
+        placeholder="a beloved soul"
+        maxlength="40"
+        autocomplete="name"
+      />
+      <p class="dear-line">Dear <span id="displayName">friend</span>,</p>
+    </section>
+
+    <blockquote class="verse">
+      <p>
+        “The Lord bless you and keep you; the Lord make His face shine upon you
+        and be gracious to you; the Lord lift up His countenance upon you and give you peace.”
+      </p>
+      <cite>— Numbers 6:24–26</cite>
+    </blockquote>
+
+    <div class="wishes" id="wishes">
+      <p class="wish-line">May God's angels encamp around you and guard your path.</p>
+      <p class="wish-line">May your year be filled with faith, hope, and gentle joy.</p>
+      <p class="wish-line">May every candle on your cake reflect a prayer answered in love.</p>
+    </div>
+
+    <div class="doves" aria-hidden="true">
+      <svg class="dove" viewBox="0 0 64 32"><path d="M8 16 Q20 4 32 14 Q44 4 56 16 Q44 12 32 18 Q20 12 8 16 Z" fill="currentColor"/></svg>
+      <svg class="dove dove-2" viewBox="0 0 64 32"><path d="M8 16 Q20 4 32 14 Q44 4 56 16 Q44 12 32 18 Q20 12 8 16 Z" fill="currentColor"/></svg>
+    </div>
+
+    <footer class="card-footer">
+      <button type="button" class="btn-blessing" id="blessBtn">
+        Receive a Birthday Blessing
+      </button>
+      <p class="amen">Amen.</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
