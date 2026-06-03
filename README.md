@@ -21,3 +21,11 @@ Then visit [http://localhost:8080](http://localhost:8080).
 - **Sound On/Off** — mute toggle
 
 Best experience: desktop Chrome or Safari with volume up. Speech uses your system’s built-in voices.
+
+## Put it online (share a link)
+
+See **[DEPLOY.md](DEPLOY.md)**. Quickest path:
+
+1. Run `python3 make_zip.py` (or use the folder as-is).
+2. Open [Netlify Drop](https://app.netlify.com/drop) and drag the folder or zip.
+3. Share the `*.netlify.app` URL with anyone.
